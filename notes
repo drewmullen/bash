@@ -1,0 +1,43 @@
+Bash scripting
+$*  = all variables… useful for prompt
+Read = read user input from prompt
+Help = provide bash help for builtins (like ‘read’)
+
+#!/bin/bash -x to output every line bash evals
+
+Or
+Wrap this command around the script commands you want to debug
+`set -x
+… some command
+Set +x`
+
+If <command>; then <command>; else <command>;
+Fi
+
+Conditional expressions
+[[ ]]
+Help [[ mentions help test
+
+Ex:
+
+If [[ ! $1 ]]; then
+  Echo “Argument missing”
+  Exit 1
+Fi
+
+Ends scripts with
+` exit 0`
+
+Arithmetic
+
+Do not compare integers using normal  >, <, =
+-eq equality
+-ne not equal
+-lt less than
+
+$# contains number of script arguments
+Ex: “did I get enough arguments when called?” 
+
+$? contains exit status for last command ran
+
+${#var_name} contains length of string
